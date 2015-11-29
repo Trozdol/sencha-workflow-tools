@@ -12,13 +12,19 @@ After a couple of years of difficult merge conflicts, generated files and out of
 So far this system has worked will with minimal issues if any. 
 
 ```
-master ____________________ tag-v0.0.1 ___ tag-v0.0.2 _ _ . .
-      \_ build ____________/______________/_________ _ _ . .
-            \_ development ______/______________ _ _ . .
-                    \_ working-branch-01 _/
-
+master _______________ tag-v0.0.1 _____ tag-v0.0.2 ___ _ _ . .
+      \_ build ____________/______________/__________ _ _ . .
+            \_ development ______/_________________ _ _ . .
+                    \_ feature-01 _/ \_ feature-02 _/
 ```
 
+`master`    
+
+primarily acts as a tagged branch for each released Cordova app.
+
+`build`     
+
+a child of master is where anything Cordova related happens. Branch if needed but keep don't `sencha app build native` anywhere but here. This is is probably the most effective way to  keep merging simple. Don't build from random branches. This will be really hard to consilidate changes to the platform builds when the time comes. 
 
 ### What to ignore...
 
