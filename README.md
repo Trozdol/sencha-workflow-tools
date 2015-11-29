@@ -18,13 +18,18 @@ master _______________ tag-v0.0.1 _____ tag-v0.0.2 ___ _ _ . .
                     \_ feature-01 _/ \_ feature-02 _/
 ```
 
-`master`    
+#### `master` Branch
 
 primarily acts as a tagged branch for each released Cordova app.
 
-`build`     
+#### `build` Branch
 
 a child of master is where anything Cordova related happens. Branch if needed but keep don't `sencha app build native` anywhere but here. This is is probably the most effective way to  keep merging simple. Don't build from random branches. This will be really hard to consilidate changes to the platform builds when the time comes. 
+
+#### `development` Branch
+
+This branch is the only branch you should branch from for adding new code. You can branch off your own branches if needed but try to avoid if possible so you can find your way home when merging back into `development`
+
 
 ### What to ignore...
 
