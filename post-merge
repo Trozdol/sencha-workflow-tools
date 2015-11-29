@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# DESCRIPTION:
+#   this git hook will help with the .gitignore
+#   file when working in teams
+#
+# WHERE:
+#   my-project/.git/hooks/post-merge
+#
+# TODO: 
+#   you will want to make this file an executable
+#   cd my-project/.git/hooks/ && chmod +x
+#
+
+echo '==================================='
+echo 'running post-merge script          '
+echo 'cleaning up project with sencha cmd'
+echo '==================================='
+
+sencha app refresh &&
+
+sencha app build &&
+
+echo '==================================='
+echo 'completed project cleanup'
+echo '==================================='
+
+echo '==================================='
+echo 'ending script with `git status`    '
+echo '==================================='
+
+git status
