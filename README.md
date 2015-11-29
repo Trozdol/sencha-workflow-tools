@@ -7,6 +7,19 @@ Working on a Sencha Touch and Cordova/Phonegap project can be tricky enough. Wor
 
 After a couple of years of difficult merge conflicts, generated files and out of repo manual merges. I believe I have found a workflow specifically to deal with common issues.
 
+### Branch Workflow
+
+So far this system has worked will with minimal issues if any. 
+
+```
+master ____________________ tag-v0.0.1 ___ tag-v0.0.2 _ _ . .
+      \_ build ____________/______________/_________ _ _ . .
+            \_ development ______/______________ _ _ . .
+                    \_ working-branch-01 _/
+
+```
+
+
 ### What to ignore...
 
 This seemed straight forward... until I started thinking about it. For a while I used what others talked about in forums or blogs for which parts of a Sencha/Cordova project to ignore. This seemed to lead to issues eventually. I could never find a clear answer so I asked myself
